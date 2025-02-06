@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.umd.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+        }git push -u origin maingit push -u origin main
+        #particles-js, #fireworks {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        .valentine-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .valentine-text {
+            font-size: 60px;
+            color: #ff66b2;
+            text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff1493, 0 0 30px #ff1493;
+            animation: glow 2s infinite alternate;
+        }
+        .valentine-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px #ff1493;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff1493, 0 0 30px #ff1493; }
+            100% { text-shadow: 0 0 20px #ff66b2, 0 0 30px #ff1493, 0 0 40px #ff69b4; }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="fireworks"></div>
+    <div class="valentine-container">
+        <div class="valentine-text">Happy Valentine ❤️</div>
+        <img src="d:\file ảnh\test 3.png" alt="Crush" class="valentine-image">
+    </div>
+    
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "color": { "value": "#ff1493" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.8 },
+                "size": { "value": 4 },
+                "line_linked": { "enable": false },
+                "move": { "speed": 5 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                }
+            }
+        });
+
+        const fireworks = new Fireworks.default(document.getElementById('fireworks'), {
+            autoresize: true,
+            opacity: 0.5,
+            acceleration: 1.05,
+            friction: 0.97,
+            gravity: 1.5,
+            particles: 50,
+            trace: 3,
+            explosion: 5,
+            boundaries: { top: 50, bottom: window.innerHeight, left: 50, right: window.innerWidth },
+        });
+        fireworks.start();
+    </script>
+</body>
+</html>
