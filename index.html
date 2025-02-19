@@ -1,92 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine</title>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.umd.js"></script>
+    <title>BUY - Trang Web Bán Hàng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            overflow: hidden;
-            background: #000;
-            font-family: 'Arial', sans-serif;
-        }git push -u origin maingit push -u origin main
-        #particles-js, #fireworks {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
+            padding: 0;
+            background-color: yellowgreen;
         }
-        .valentine-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+        header {
+            background: #222;
+            color: aqua;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .valentine-text {
-            font-size: 60px;
-            color: #ff66b2;
-            text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff1493, 0 0 30px #ff1493;
-            animation: glow 2s infinite alternate;
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
         }
-        .valentine-image {
+        .header-left a, .header-right a {
+            color: aqua;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        .header-right img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+        .search-box {
+            padding: 5px;
             width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-top: 20px;
-            box-shadow: 0 0 20px #ff1493;
+            border-radius: 5px;
+            border: 1px solid #f0b45b;
         }
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff1493, 0 0 30px #ff1493; }
-            100% { text-shadow: 0 0 20px #ff66b2, 0 0 30px #ff1493, 0 0 40px #ff69b4; }
+        .container {
+            width: 90%;
+            margin: auto;
+            background: paleturquoise;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+        .hero img {
+            width: 150px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            color: rgb(204, 235, 132);
+            font-size: 16px;
+        }
+        .btn-primary { background: #ff6f00; }
+        .btn-secondary { background: #0277bd; }
+        .btn-tertiary { background: #2e7d32; }
+        .products {
+            display: flex;
+            justify-content: space-between;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 30%;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .sidebar {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            width: 20%;
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div id="fireworks"></div>
-    <div class="valentine-container">
-        <div class="valentine-text">Happy Valentine ❤️</div>
-        
-        <img src="test 3.png" alt="Crush" class="valentine-image">
-
-    </div>
+    <header>
+        <div class="header-left">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Liên hệ</a>
+            <span>0776257464</span>
+        </div>
+        <div class="header-right">
+            <a href="#">Đăng nhập</a>
+            <a href="#">Thông báo</a>
+            <a href="#">Mua sắm</a>
+            
+        </div>
+    </header>
     
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 100 },
-                "color": { "value": "#ff1493" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.8 },
-                "size": { "value": 4 },
-                "line_linked": { "enable": false },
-                "move": { "speed": 5 }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" }
-                }
-            }
-        });
-
-        const fireworks = new Fireworks.default(document.getElementById('fireworks'), {
-            autoresize: true,
-            opacity: 0.5,
-            acceleration: 1.05,
-            friction: 0.97,
-            gravity: 1.5,
-            particles: 50,
-            trace: 3,
-            explosion: 5,
-            boundaries: { top: 50, bottom: window.innerHeight, left: 50, right: window.innerWidth },
-        });
-        fireworks.start();
-    </script>
+    <div class="container">
+        <div class="hero">
+            <img src="d:\file ảnh\logo.PNG" alt="Oke Print">
+            <h2>Welcome to P.Đại IT's website.</h2>
+            <input type="text" class="search-box" placeholder="Tìm kiếm sản phẩm">
+            <p>Tìm kiếm các thương hiệu và sản phẩm chất lượng cao</p>
+            <div class="buttons">
+                <button class="btn-primary">Mua sắm</button>
+                <button class="btn-secondary">Đặt hàng</button>
+                <button class="btn-tertiary">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        
+        <div class="products">
+            <div class="product">
+                <img src="d:\file ảnh\robot3.PNG" width="10" height="300"  alt="Product 1">
+                <h3>Robot Điều Khiển Từ Xa</h3>
+                <p>49.678.000 VNĐ</p>
+            </div>
+            <div class="product">
+                <img src="d:\file ảnh\robot1.PNG" width="10" height="300" alt="Product 2">
+                <h3>Robot cảm xúc AI</h3>
+                <p>$35.680.000 VNĐ</p>
+            </div>
+            <div class="product">
+                <img src="d:\file ảnh\robot00.PNG" width="1" height="300"    alt="Product 3">
+                <h3>Robot Hút Bụi</h3>
+                <p>25.600.000 VNĐ</p>
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 P.Đại IT. Bản quyền được bảo lưu</p>
+        <p>&copy;Thông tin wed developer <a href="https://github.com/daiitd/phuongdai-IT">phuongdaiIT.com</a></p>
+    </footer>
 </body>
 </html>
