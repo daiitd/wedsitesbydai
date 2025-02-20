@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Header */
+        header {
+            background: #222;
+            color: aqua;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
+        }
+        .header-left a, .header-right a {
+            color: aqua;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    .container {
+        width: 100%; /* Đảm bảo nội dung không bị tràn */
+        padding: 10px; /* Tạo khoảng cách hợp lý */
+    }
+
+    img {
+        max-width: 100%; /* Ảnh không bị tràn ra ngoài */
+        height: auto;
+    }
+        }
+        
+        /* Sản phẩm */
+        .products {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .product {
+            background: rgb(187, 252, 214);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 30%;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Nhóm nút */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Khoảng cách giữa các nút */
+            margin-top: 10px;
+        }
+
+        /* Nút */
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        /* Nút mua ngay */
+        .buy-button {
+            background: red;
+        }
+        .buy-button:hover {
+            background: #ff4500;
+            box-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
+        }
+
+        /* Nút thêm vào giỏ hàng */
+        .cart-button {
+            background: #008CBA;
+        }
+        .cart-button:hover {
+            background: #007bb5;
+            box-shadow: 0 0 10px rgba(0, 140, 186, 0.7);
+        }
+
+        /* Hiệu ứng khi nhấn */
+        .button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="#">Trang chủ</a>
+            <a href="index.html">Giới thiệu</a>
+            <a href="index1.html">Sản phẩm</a>
+            <a href="#">Liên hệ</a>
+            <span>0776257464</span>
+        </div>
+        <div class="header-right">
+            <a href="account.html">Đăng nhập</a>
+            <a href="#">Thông báo</a>
+            <a href="#">Mua sắm</a>
+        </div>
+    </header>
+
+    <div class="products">
+        <div class="product">
+            <img src="nho.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Nho nhập khẩu đài loan</h3>
+            <p>Giá: 250.000 VNĐ</p>
+            <div class="button-group">
+                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+        <div class="product">
+            <img src="apple.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Táo nhập khẩu mỹ</h3>
+            <p>Giá: 400.000 VNĐ</p>
+            <div class="button-group">
+                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+        <div class="product">
+            <img src="quyt.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Quýt ngọt thái lan</h3>
+            <p>Giá: 565.000 VNĐ</p>
+            <div class="button-group">
+                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+        <div class="product">
+            <img src="saurieng.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Sầu riêng việt</h3>
+            <p>Giá: 360.000 VNĐ</p>
+            <div class="button-group">
+                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
