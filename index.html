@@ -8,12 +8,48 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
+         @media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left, .header-right {
+        flex-direction: column;
+    }
+
+    .header-left a, .header-right a {
+        margin: 5px 0;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: yellowgreen;
         }
+       
+
         header {
             background: #222;
             color: aqua;
@@ -123,23 +159,8 @@
             border-radius: 5px;
             width: 20%;
         }
-        @media screen and (max-width: 768px) {
-            body {
-        font-size: 14px; /* Giảm kích thước chữ */
-    }
-
-    .container {
-        width: 100%; /* Đảm bảo nội dung không bị tràn */
-        padding: 10px; /* Tạo khoảng cách hợp lý */
-    }
-
-    img {
-        max-width: 100%; /* Ảnh không bị tràn ra ngoài */
-        height: auto;
-    }
-        }
-            
-        
+       
+   
          /* Nhóm nút */
          .button-group {
             display: flex;
@@ -188,16 +209,17 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="#">Trang chủ</a>
-            <a href="#">Giới thiệu</a>
+            <a href="index.html">Trang chủ</a>
+            <a href="index.html">Giới thiệu</a>
             <a href="index1.html">Sản phẩm</a>
+            <a href="account.html">Quản trị Admin</a>
             <a href="#">Liên hệ</a>
-            <span>0776257464</span>
+            
         </div>
         <div class="header-right">
             <a href="account.html">Đăng nhập</a>
             <a href="#">Thông báo</a>
-            <a href="#">Mua sắm</a>
+            <a href="buy.html">Mua sắm</a>
             
         </div>
     </header>
@@ -217,41 +239,64 @@
         
         <div class="products">
             <div class="product">
-                <img src="robot3.PNG" width="10" height="300"  alt="Product 1">
-                <h3>Robot Điều Khiển Từ Xa</h3>
-                <p>Giá: 49.678.000 VNĐ</p>
+                <img src="kemhau.png"  alt="Product 1">
+                <h3>Kem dưa hấu</h3>
+                <p>Giá: 59.000 VNĐ</p>
                 <div class="button-group">
-                    <a href="#" class="button buy-button">Mua ngay</a>
-                    <a href="#" class="button cart-button">Thêm vào giỏ hàng</a>
+                    <a href="buy.html" class="button buy-button">Mua ngay</a>
+                    <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>
                 </div>
             </div>
             <div class="product">
-                <img src="robot1.PNG" width="10" height="300" alt="Product 2">
-                <h3>Robot cảm xúc AI</h3>
-<<<<<<< HEAD
-                <p>35.680.000 VNĐ</p>
-=======
-                <p>Giá: 35.680.000 VNĐ</p>
+                <img src="kemdua.jpg"  alt="Product 2">
+                <h3>Kem dừa</h3>
+                <p>Giá: 49.000 VNĐ</p>
                 <div class="button-group">
-                    <a href="#" class="button buy-button">Mua ngay</a>
-                    <a href="#" class="button cart-button">Thêm vào giỏ hàng</a>
+                    <a href="buy.html" class="button buy-button">Mua ngay</a>
+                    <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>
                 </div>
->>>>>>> 68e758a (Update code and picture)
             </div>
             <div class="product">
-                <img src="robot00.PNG" width="1" height="300"  alt="Product 3">
-                <h3>Robot Hút Bụi</h3>
-                <p>Giá: 25.600.000 VNĐ</p>
+                <img src="kemsau.jpg"  alt="Product 3">
+                <h3>Kem sầu riêng</h3>
+                <p>Giá: 39.000 VNĐ</p>
                 <div class="button-group">
-                    <a href="#" class="button buy-button">Mua ngay</a>
-                    <a href="#" class="button cart-button">Thêm vào giỏ hàng</a>
+                    <a href="buy.html" class="button buy-button">Mua ngay</a>
+                    <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
+        <div class="products">
+            <div class="product">
+                <img src="kemdau.jpeg"  alt="Product 1">
+                <h3>Kem socola</h3>
+                <p>Giá: 33.000 VNĐ</p>
+                <div class="button-group">
+                    <a href="buy.html" class="button buy-button">Mua ngay</a>
+                    <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>                    
+            </div>
+            
+        </div>
+        <div class="product">
+            <img src="kemkhoai.jpg"  alt="Product 1">
+            <h3>Kem khoai môn</h3>
+            <p>Giá: 33.000 VNĐ</p>
+            <div class="button-group">
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
+                <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="kemvani.jpg"  alt="Product 1">
+        <h3>Kem vani</h3>
+        <p>Giá: 22.000 VNĐ</p>
+        <div class="button-group">
+            <a href="buy.html" class="button buy-button">Mua ngay</a>
+            <a href="buy.html" class="button cart-button">Thêm vào giỏ hàng</a>
     </div>
     <footer>
         <p>&copy; 2025 P.Đại IT. Bản quyền được bảo lưu</p>
-        <p>&copy;Thông tin wed developer <a href="https://github.com/daiitd/wedsitesbydai">phuongdaiIT.com</a></p>
+        <p>&copy;Thông tin wed developer <a href="https://github.com/daiitd/phuongdai-IT">phuongdaiIT.com</a></p>
     </footer>
 </body>
 </html>

@@ -6,6 +6,41 @@
     <title>Document</title>
     <style>
         /* Header */
+    @media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left, .header-right {
+        flex-direction: column;
+    }
+
+    .header-left a, .header-right a {
+        margin: 5px 0;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
         header {
             background: #222;
             color: aqua;
@@ -24,21 +59,7 @@
             margin: 0 10px;
             font-size: 14px;
         }
-        @media screen and (max-width: 768px) {
-            body {
-        font-size: 14px; /* Giảm kích thước chữ */
-    }
-
-    .container {
-        width: 100%; /* Đảm bảo nội dung không bị tràn */
-        padding: 10px; /* Tạo khoảng cách hợp lý */
-    }
-
-    img {
-        max-width: 100%; /* Ảnh không bị tràn ra ngoài */
-        height: auto;
-    }
-        }
+    
         
         /* Sản phẩm */
         .products {
@@ -108,16 +129,17 @@
 
     <header>
         <div class="header-left">
-            <a href="#">Trang chủ</a>
+            <a href="index.html">Trang chủ</a>
             <a href="index.html">Giới thiệu</a>
             <a href="index1.html">Sản phẩm</a>
+            <a href="account.html">Quản trị Admin</a>
             <a href="#">Liên hệ</a>
-            <span>0776257464</span>
+         
         </div>
         <div class="header-right">
             <a href="account.html">Đăng nhập</a>
             <a href="#">Thông báo</a>
-            <a href="#">Mua sắm</a>
+            <a href="index1.html">Mua sắm</a>
         </div>
     </header>
 
@@ -127,7 +149,7 @@
             <h3>Nho nhập khẩu đài loan</h3>
             <p>Giá: 250.000 VNĐ</p>
             <div class="button-group">
-                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
                 <a href="#" class="button cart-button">Thêm vào giỏ</a>
             </div>
         </div>
@@ -136,7 +158,7 @@
             <h3>Táo nhập khẩu mỹ</h3>
             <p>Giá: 400.000 VNĐ</p>
             <div class="button-group">
-                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
                 <a href="#" class="button cart-button">Thêm vào giỏ</a>
             </div>
         </div>
@@ -145,7 +167,7 @@
             <h3>Quýt ngọt thái lan</h3>
             <p>Giá: 565.000 VNĐ</p>
             <div class="button-group">
-                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
                 <a href="#" class="button cart-button">Thêm vào giỏ</a>
             </div>
         </div>
@@ -154,11 +176,50 @@
             <h3>Sầu riêng việt</h3>
             <p>Giá: 360.000 VNĐ</p>
             <div class="button-group">
-                <a href="#" class="button buy-button">Mua ngay</a>
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
                 <a href="#" class="button cart-button">Thêm vào giỏ</a>
             </div>
         </div>
     </div>
+    <div class="products">
+        <div class="product">
+            <img src="tradao.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Trà Đào</h3>
+            <p>Giá: 25.000 VNĐ</p>
+            <div class="button-group">
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+
+        </div>
+        <div class="product">
+            <img src="tramancau.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Trà Mảng Cầu</h3>
+            <p>Giá: 33.000 VNĐ</p>
+            <div class="button-group">
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+        <div class="product">
+            <img src="trasua.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Trà Sữa Trân Châu</h3>
+            <p>Giá: 27.000 VNĐ</p>
+            <div class="button-group">
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+        <div class="product">
+            <img src="travai.jpg" width="10" height="300"  alt="Product 1">
+            <h3>Trà Vải</h3>
+            <p>Giá: 33.000 VNĐ</p>
+            <div class="button-group">
+                <a href="buy.html" class="button buy-button">Mua ngay</a>
+                <a href="#" class="button cart-button">Thêm vào giỏ</a>
+            </div>
+        </div>
+    </div>   
 
 </body>
 </html>

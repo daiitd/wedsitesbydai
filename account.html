@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập</title>
     <style>
+        @media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left, .header-right {
+        flex-direction: column;
+    }
+
+    .header-left a, .header-right a {
+        margin: 5px 0;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
         header {
             background: #222;
             color: aqua;
@@ -68,16 +103,17 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="#">Trang chủ</a>
+            <a href="index.html">Trang chủ</a>
             <a href="index.html">Giới thiệu</a>
             <a href="index1.html">Sản phẩm</a>
+            <a href="account.html">Quản trị Admin</a>
             <a href="#">Liên hệ</a>
-            <span>0776257464</span>
+           
         </div>
         <div class="header-right">
-            <a href="#">Đăng nhập</a>
+            <a href="account.html">Đăng nhập</a>
             <a href="#">Thông báo</a>
-            <a href="#">Mua sắm</a>
+            <a href="index1.html">Mua sắm</a>
         </div>
     </header>
     <div class="login-container">
@@ -87,6 +123,7 @@
             <input type="password" id="password" placeholder="Mật khẩu" required>
             <p class="error" id="errorMessage"></p>
             <button type="submit">Đăng Nhập</button>
+            
         </form>
     </div>
     
@@ -99,7 +136,7 @@
             
             if (username === "daiit@gmail.com" && password === "123456") {
                 alert("Đăng nhập thành công!");
-                window.location.href = "dashboard.html";
+                window.location.href = "admin.html";
             } else {
                 errorMessage.textContent = "Tên đăng nhập hoặc mật khẩu không đúng";
             }
