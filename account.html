@@ -137,7 +137,12 @@
             if (username === "daiit@gmail.com" && password === "123456") {
                 alert("Đăng nhập thành công!");
                 window.location.href = "admin.html";
-            } else {
+            }else if( username === "user01.@gmail.com" && password === "1") {
+                alert("Đăng nhập thành công!");
+                window.location.href = "index.html";
+            }
+            
+            else {
                 errorMessage.textContent = "Tên đăng nhập hoặc mật khẩu không đúng";
             }
         });
